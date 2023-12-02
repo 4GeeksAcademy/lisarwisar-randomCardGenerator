@@ -1,1 +1,38 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+  padding: 30px 100px 30px 100px;
+}
+
+#cardContainer {
+  background-color: white;
+  height: 600px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.cardBody {
+  height: 70%;
+  font-size: 12em;
+  font-weight: bold;
+}
+
+.cardTopHeader,
+.cardBottomHeader {
+  height: 15%;
+  font-size: 6em;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.cardBottomHeader {
+  transform: rotate(180deg);
+}
+
+.blackCard {
+  color: black;
+}
+
+.redCard {
+  color: red;
+}
