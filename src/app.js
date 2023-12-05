@@ -26,31 +26,13 @@ cardWidth.addEventListener("keypress", function(event) {
 
 function randomizeCard() {
   let cardNumber = 0;
-  cardNumber = getRandomInt(12);
-  cardNumber > 1 && cardNumber < 11
-    ? true
-    : cardNumber == 1
-    ? (cardNumber = "A")
-    : cardNumber == 11
-    ? (cardNumber = "J")
-    : cardNumber == 12
-    ? (cardNumber = "Q")
-    : cardNumber == 13
-    ? (cardNumber = "K")
-    : false;
+  let cardNumberOptions = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+  cardNumber = cardNumberOptions[getRandomInt(12)];
 
   let cardSuit = 0;
+  let cardSuitOptions = [`♦`, `♥`, `♠`, `♣`];
   let cardSuitClass = "";
-  cardSuit = getRandomInt(3);
-  cardSuit == 1
-    ? (cardSuit = `♦`)
-    : cardSuit == 2
-    ? (cardSuit = `♥`)
-    : cardSuit == 3
-    ? (cardSuit = `♠`)
-    : cardSuit == 4
-    ? (cardSuit = `♣`)
-    : false;
+  cardSuit = cardSuitOptions[getRandomInt(4)];
 
   cardSuit == `♦`
     ? (cardSuitClass = `redCard`)
@@ -78,5 +60,5 @@ function randomizeCard() {
 }
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max + 1);
+  return Math.floor(Math.random() * max);
 }
